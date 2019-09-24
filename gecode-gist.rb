@@ -1,4 +1,4 @@
-class GecodeGist < Formula
+class Gecode < Formula
   desc "Toolkit for developing constraint-based systems and applications"
   homepage "https://www.gecode.org/"
   url "https://github.com/Gecode/gecode/archive/release-6.2.0.tar.gz"
