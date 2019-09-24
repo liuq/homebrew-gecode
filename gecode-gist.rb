@@ -21,7 +21,7 @@ class Gecode < Formula
       --disable-examples
     ]
     ENV.cxx11
-    if build.with? "qt"
+    if !build.without? "qt"
       args << "--enable-qt"
       ENV.append_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/opt/qt/lib/pkgconfig"
     else
@@ -80,7 +80,7 @@ class Gecode < Formula
       -L#{lib}
       -o test
     ]
-    if build.with? "qt"
+    if !build.without? "qt"
       args << "-I#{HOMEBREW_PREFIX}/opt/qt/include"
       args << "-lgecodegist"
     end
